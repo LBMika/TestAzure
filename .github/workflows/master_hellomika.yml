@@ -21,11 +21,6 @@ jobs:
       - name: Connect to repository
         uses: actions/checkout@v2
         
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: node-app
-
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
